@@ -11,7 +11,7 @@ function initializeLiff(liffId) {
         .then(() => {
             if (!liff.isInClient() && !liff.isLoggedIn()) {
                 window.alert("LINEアカウントにログインしてください。");
-                liff.login({redirectUri: window.location.origin + '/'});
+                liff.login({redirectUri: location.href});
             }
         })
         .catch((err) => {
